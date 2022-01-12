@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vue 3 Course</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p>{{title}}-{{author}}-{{age}}</p>
+
+        <!-- v-on -> event listener && click -> type of event && on the right side we write code in JavaScript  -->
+        <button v-on:click="age++">Increase</button>
+        <button v-on:click="age--">Decrease</button>
+
+        <div @click="changeTitle('sag velgard')">change title</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
