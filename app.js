@@ -3,6 +3,8 @@ const app = Vue.createApp({
     //data, function
     data(){
         return{
+            x:0,
+            y:0,
             showBooks: true,
             title: "bof koor",
             author: 'sadegh hedayat',
@@ -14,10 +16,16 @@ const app = Vue.createApp({
             // this.title = title;
             changeShowBooks(){
                  this.showBooks = !this.showBooks
-        },
-            handleEvent(){
-                console.log('event')
-            }
+                },
+
+            handleEvent(e){
+                console.log(e)
+                },
+
+            handleMouseMove(e){
+                this.x = e.offsetX
+                this.y = e.offsetY
+                }
     }
 })
 
