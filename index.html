@@ -44,7 +44,7 @@
 
         <div v-if="showBooks">
 
-            <ul v-for="book in books">
+            <ul v-for="book in filteredBooks">
 
                     <!-- ":" => this sign is a shorthand for v-bind -->
                 <li :class="{fav: book.isFave}" @click="changeFav(book)">
