@@ -7,9 +7,9 @@ const app = Vue.createApp({
             url:"http://www.google.com",
             showBooks: true,
             books:[
-                {title: "Bof koor", author: "Sadegh Hedayat", image:"images/boofkoor.jpg"},
-                {title: "Sag velgard", author: "Sadegh Hedayat", image:"images/kelidar.jpeg"},
-                {title: "Kelidar", author: "Mahmud DowlatAbadi", image:"images/sagvelgard.jpg"},
+                {title: "Bof koor", author: "Sadegh Hedayat", image:"images/boofkoor.jpg" , isFave: false},
+                {title: "Sag velgard", author: "Sadegh Hedayat", image:"images/kelidar.jpeg", isFave: true},
+                {title: "Kelidar", author: "Mahmud DowlatAbadi", image:"images/sagvelgard.jpg", isFave: true},
             ]
         }
     },

@@ -4,7 +4,7 @@
     <title>Vue 3 Course</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <style>
-        .body{
+        body{
             background: #eee ;
             max-width: 960px ;
             margin: 20px auto;
@@ -31,6 +31,10 @@
             height: 150px;
         }
 
+        .fav{
+            background: rgb(111, 223, 20);
+        }
+
     </style>
 </head>
 <body>
@@ -40,9 +44,12 @@
         <div v-if="showBooks">
 
             <ul v-for="book in books">
-                <li>
+
+                    <!-- ":" => this sign is a shorthand for v-bind -->
+                <li :class="{fav: book.isFave}">
                     <h3>{{book.title}}</h3>
                     <p>{{book.author}}</p>
+                    
                     <!-- ":" => this sign is a shorthand for v-bind -->
                     <img class="image" :src="book.image" :alt="book.title">
                 </li>
