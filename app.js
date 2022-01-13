@@ -8,8 +8,8 @@ const app = Vue.createApp({
             showBooks: true,
             books:[
                 {title: "Bof koor", author: "Sadegh Hedayat", image:"images/boofkoor.jpg" , isFave: false},
-                {title: "Sag velgard", author: "Sadegh Hedayat", image:"images/kelidar.jpeg", isFave: true},
-                {title: "Kelidar", author: "Mahmud DowlatAbadi", image:"images/sagvelgard.jpg", isFave: true},
+                {title: "Sag velgard", author: "Sadegh Hedayat", image:"images/kelidar.jpeg", isFave: false},
+                {title: "Kelidar", author: "Mahmud DowlatAbadi", image:"images/sagvelgard.jpg", isFave: false},
             ]
         }
     },
@@ -27,7 +27,11 @@ const app = Vue.createApp({
             handleMouseMove(e){
                 this.x = e.offsetX
                 this.y = e.offsetY
-                }
+                },
+
+            changeFav(book){
+                book.isFave = !book.isFave
+            }
     }
 })
 

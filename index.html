@@ -33,6 +33,7 @@
 
         .fav{
             background: rgb(111, 223, 20);
+            color: #fff;
         }
 
     </style>
@@ -46,10 +47,10 @@
             <ul v-for="book in books">
 
                     <!-- ":" => this sign is a shorthand for v-bind -->
-                <li :class="{fav: book.isFave}">
+                <li :class="{fav: book.isFave}" @click="changeFav(book)">
                     <h3>{{book.title}}</h3>
                     <p>{{book.author}}</p>
-                    
+
                     <!-- ":" => this sign is a shorthand for v-bind -->
                     <img class="image" :src="book.image" :alt="book.title">
                 </li>
