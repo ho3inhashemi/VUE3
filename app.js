@@ -3,12 +3,13 @@ const app = Vue.createApp({
     //data, function
     data(){
         return{
-            x:0,
-            y:0,
+            
             showBooks: true,
-            title: "bof koor",
-            author: 'sadegh hedayat',
-            age: 45
+            books:[
+                {title: "Bof koor", author: "Sadegh Hedayat"},
+                {title: "Sag velgard", author: "Sadegh Hedayat"},
+                {title: "Kelidar", author: "Mahmud DowlatAbadi"},
+            ]
         }
     },
     methods: {
