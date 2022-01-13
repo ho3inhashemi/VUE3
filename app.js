@@ -3,12 +3,13 @@ const app = Vue.createApp({
     //data, function
     data(){
         return{
-            
+
+            url:"http://www.google.com",
             showBooks: true,
             books:[
-                {title: "Bof koor", author: "Sadegh Hedayat"},
-                {title: "Sag velgard", author: "Sadegh Hedayat"},
-                {title: "Kelidar", author: "Mahmud DowlatAbadi"},
+                {title: "Bof koor", author: "Sadegh Hedayat", image:"images/boofkoor.jpg"},
+                {title: "Sag velgard", author: "Sadegh Hedayat", image:"images/kelidar.jpeg"},
+                {title: "Kelidar", author: "Mahmud DowlatAbadi", image:"images/sagvelgard.jpg"},
             ]
         }
     },

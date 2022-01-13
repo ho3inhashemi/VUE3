@@ -4,7 +4,7 @@
     <title>Vue 3 Course</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <style>
-        .box{
+        body{
             padding: 100px 0;
             width: 400px;
             text-align: center;
@@ -12,6 +12,12 @@
             margin: 20px;
             display: inline-block; 
         }
+
+        .image{
+            width: 150px;
+            height: 150px;
+        }
+
     </style>
 </head>
 <body>
@@ -19,13 +25,13 @@
     <div id="app">
 
         <div v-if="showBooks">
-            <p>{{books[0].title}}-{{books[0].author}}</p>
-            <p>{{books[1].title}}-{{books[1].author}}</p>
 
             <ul v-for="book in books">
                 <li>
                     <h3>{{book.title}}</h3>
                     <p>{{book.author}}</p>
+                    <!-- ":" => this sign is a shorthand for v-bind -->
+                    <img class="image" :src="book.image" :alt="book.title">
                 </li>
             </ul>
 
